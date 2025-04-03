@@ -2,16 +2,16 @@
 
 View the [demo here](https://demo.magic-portfolio.com).
 
-![Magic Portfolio](public/images/cover.png)
+![Portfolio](public/images/cover.png)
 
 
 # **Getting started**
 
-Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
+This Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
 
 **1. Clone the repository**
 ```
-git clone https://github.com/once-ui-system/magic-portfolio.git
+git clone https://github.com/taidev722/portfolio.git
 ```
 
 **2. Install dependencies**
