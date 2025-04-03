@@ -1,25 +1,38 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Tai",
+  lastName: "Nguyen",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Senior Front End Developer",
   avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "America/Los_Angeles", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Khmer"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
   display: true,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
-    <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
-    </>
+    <div className="space-y-8">
+        <NewsletterCard
+          title="The Future of Frontend: Trends to Watch in 2024"
+          summary="Explore the biggest trends shaping frontend development this year."
+          cta={[
+            "1. Which trend excites you most? Reply to this email!",
+            "2. Want to deep dive on one of these? Let me know!"
+          ]}
+          trends={[
+            "React Server Components (RSC)",
+            "WebAssembly (WASM) for high-performance apps",
+            "AI-powered UI generation tools",
+            "Edge computing & CDN-powered frontends",
+            "State management evolution"
+          ]}
+        />
+      </div>
   ),
 };
 
@@ -29,22 +42,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "X",
-    icon: "x",
-    link: "",
+    link: "https://github.com/stackmaster92",
   },
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:taidev722@gmail.com.com",
   },
 ];
 
@@ -52,11 +55,10 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>Front End Developer</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Tai, a Results-driven Senior Front End Developer <br /> with proven track record of building high-performance websites
     </>
   ),
 };
@@ -81,9 +83,9 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Tai is a California-based Senior Frontend Developer with a passion for transforming complex challenges
+        into scalable, high-performance frontend solutions. His work spans digital design, interactive
+        experiences, and the convergence of user interfaces and technology.
       </>
     ),
   },
@@ -138,8 +140,8 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Hanoi Universiy of Science and Technology",
+        description: <>Studied Computer Science.</>,
       },
       {
         name: "Build the Future",
@@ -281,5 +283,75 @@ const gallery = {
     },
   ],
 };
+
+ function NewsletterCard({ title, summary, cta, trends }) {
+  return (
+    <div style={{
+      maxWidth: '42rem', // max-w-2xl
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      padding: '1.5rem', // p-6
+      borderRadius: '0.75rem', // rounded-xl
+      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)', // shadow-md
+      transition: 'box-shadow 0.3s ease', // transition-shadow
+      cursor: 'pointer',
+      ':hover': {
+        boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)' // hover:shadow-lg
+      }
+    }}>
+      <h2 style={{
+        fontSize: '1.5rem', // text-2xl
+        fontWeight: '700', // font-bold
+        marginBottom: '0.5rem' // mb-2
+      }}>{title}</h2>
+      
+      <p style={{
+        marginBottom: '1rem' // mb-4
+      }}>{summary}</p>
+      
+      {trends && (
+        <ul style={{
+          marginBottom: '1rem', // mb-4
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '0.5rem',
+          paddingLeft: '3rem'
+        }}>
+          {trends.map((trend, index) => (
+            <li key={index} style={{
+              display: 'flex',
+              alignItems: 'flex-start' // items-start
+            }}>
+              <span style={{
+                marginRight: '0.5rem' // mr-2
+              }}>✓</span>
+              <span style={{
+              }}>{trend}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {cta && (
+        <ul style={{
+          marginBottom: '1rem', // mb-4
+          display: 'flex',
+          flexDirection: 'column',
+        }}>
+          {cta.map((que, index) => (
+            <li key={index} style={{
+              display: 'flex',
+              alignItems: 'flex-start' // items-start
+            }}>
+              <span style={{
+                fontStyle: "italic"
+              }}>{que}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
 
 export { person, social, newsletter, home, about, blog, work, gallery };
