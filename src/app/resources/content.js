@@ -17,22 +17,22 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <div className="space-y-8">
-        <NewsletterCard
-          title="The Future of Frontend: Trends to Watch in 2024"
-          summary="Explore the biggest trends shaping frontend development this year."
-          cta={[
-            "1. Which trend excites you most? Reply to this email!",
-            "2. Want to deep dive on one of these? Let me know!"
-          ]}
-          trends={[
-            "React Server Components (RSC)",
-            "WebAssembly (WASM) for high-performance apps",
-            "AI-powered UI generation tools",
-            "Edge computing & CDN-powered frontends",
-            "State management evolution"
-          ]}
-        />
-      </div>
+      <NewsletterCard
+        title="The Future of Frontend: Trends to Watch in 2024"
+        summary="Explore the biggest trends shaping frontend development this year."
+        cta={[
+          "1. Which trend excites you most? Reply to this email!",
+          "2. Want to deep dive on one of these? Let me know!",
+        ]}
+        trends={[
+          "React Server Components (RSC)",
+          "WebAssembly (WASM) for high-performance apps",
+          "AI-powered UI generation tools",
+          "Edge computing & CDN-powered frontends",
+          "State management evolution",
+        ]}
+      />
+    </div>
   ),
 };
 
@@ -58,7 +58,8 @@ const home = {
   headline: <>Front End Developer</>,
   subline: (
     <>
-      I'm Tai, a Results-driven Senior Front End Developer <br /> with proven track record of building high-performance websites
+      I'm Tai, a Results-driven Senior Front End Developer <br /> with proven
+      track record of building high-performance websites
     </>
   ),
 };
@@ -76,16 +77,17 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://calendly.com/taidev722",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Tai is a California-based Senior Frontend Developer with a passion for transforming complex challenges
-        into scalable, high-performance frontend solutions. His work spans digital design, interactive
-        experiences, and the convergence of user interfaces and technology.
+        Tai is a California-based Senior Frontend Developer with a passion for
+        transforming complex challenges into scalable, high-performance frontend
+        solutions. His work spans digital design, interactive experiences, and
+        the convergence of user interfaces and technology.
       </>
     ),
   },
@@ -94,17 +96,40 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "AcuityMD",
+        timeframe: "7/2022 - 1/2025",
+        role: "Senior Front End Developer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Developed a furnishing and apartment design platform using React.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Implemented WCAG 2.1-compliant UI components that ensure a fully
+            accessible design experience for users.
+          </>,
+          <>
+            Led the update of websites to align with new marketing strategies
+            and collaborated closely with designers to enhance styling details.
+          </>,
+          <>
+            Scaled state management using Redux and optimized data flow to boost
+            performance and maintainability.
+          </>,
+          <>
+            Translated complex technical concepts into clear insights for
+            non-technical stakeholders.
+          </>,
+          <>
+            Containerized React apps with Docker and automated deployments via
+            CI/CD, accelerating development workflows.
+          </>,
+          <>
+            Wrote unit/integration tests (Cypress, Jest) to enhance UI
+            reliability and platform stability.
+          </>,
+          <>
+            Led a cross-functional team to launch a new product line,
+            contributing to a 15% increase in overall company revenue.
           </>,
         ],
         images: [
@@ -118,17 +143,78 @@ const about = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Isovalent",
+        timeframe: "2/2019 - 6/2022",
+        role: "React Front End Developer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Developed robust test suites for search, filtering and
+            recommendation systems to increase reliability and test coverage.{" "}
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Optimized a complex React component and reduced re-renders to
+            improve app performance.
+          </>,
+          <>
+            Collaborated with UX/UI designers to translate wireframes into
+            functional prototypes to ensure brand consistency and accelerating
+            iterative feedback cycles.
+          </>,
+          <>
+            Engineered the Trail Advisor platform with Next.js and implemented
+            asynchronous API handling and SSR to boost performance
+          </>,
+          <>
+            Implemented WCAG-compliant accessibility standards across all UI
+            components to create inclusive experiences for users with diverse
+            abilities.
+          </>,
+          <>
+            Delivered pixel-perfect UIs by meticulously translating Figma
+            designs to code.
+          </>,
+          <>
+            Optimized database performance by refactoring legacy SQL queries to
+            reduce query execution time.
+          </>,
+          <>
+            Boosted rendering performance via async techniques and streamlined
+            page transitions.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Eon",
+        timeframe: "4/2017 - 1/2019",
+        role: "Front End Developer",
+        achievements: [
+          <>
+            Implemented a fluid grid system and flexible layouts using Grid,
+            Flexbox and media queries to ensure responsiveness across various
+            screen sizes and devices.
+          </>,
+          <>
+            Developed and delivered MVP application for analyzing credit card
+            points
+          </>,
+          <>
+            Developed a complex, JSON-based form solution that took care of form
+            generation for the client and validation on both back-end and client
+            side
+          </>,
+          <>
+            Developed Netflix-like media platform using React, Next.Js based on
+            the Figma designs.
+          </>,
+          <>
+            Refactored legacy components and optimized HTML structure to improve
+            code readability and maintainability.
+          </>,
+          <>
+            Performed rigorous cross-browser testing and resolved
+            inconsistencies in HTML semantics, CSS styling and responsive
+            breakpoints.
           </>,
         ],
         images: [],
@@ -143,10 +229,6 @@ const about = {
         name: "Hanoi Universiy of Science and Technology",
         description: <>Studied Computer Science.</>,
       },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
     ],
   },
   technical: {
@@ -155,7 +237,9 @@ const about = {
     skills: [
       {
         title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        description: (
+          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+        ),
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -174,7 +258,9 @@ const about = {
       },
       {
         title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        description: (
+          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+        ),
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -284,68 +370,97 @@ const gallery = {
   ],
 };
 
- function NewsletterCard({ title, summary, cta, trends }) {
+function NewsletterCard({ title, summary, cta, trends }) {
   return (
-    <div style={{
-      maxWidth: '42rem', // max-w-2xl
-      marginLeft: 'auto',
-      marginRight: 'auto',
-      padding: '1.5rem', // p-6
-      borderRadius: '0.75rem', // rounded-xl
-      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)', // shadow-md
-      transition: 'box-shadow 0.3s ease', // transition-shadow
-      cursor: 'pointer',
-      ':hover': {
-        boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)' // hover:shadow-lg
-      }
-    }}>
-      <h2 style={{
-        fontSize: '1.5rem', // text-2xl
-        fontWeight: '700', // font-bold
-        marginBottom: '0.5rem' // mb-2
-      }}>{title}</h2>
-      
-      <p style={{
-        marginBottom: '1rem' // mb-4
-      }}>{summary}</p>
-      
+    <div
+      style={{
+        maxWidth: "42rem", // max-w-2xl
+        marginLeft: "auto",
+        marginRight: "auto",
+        padding: "1.5rem", // p-6
+        borderRadius: "0.75rem", // rounded-xl
+        boxShadow:
+          "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)", // shadow-md
+        transition: "box-shadow 0.3s ease", // transition-shadow
+        cursor: "pointer",
+        ":hover": {
+          boxShadow:
+            "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)", // hover:shadow-lg
+        },
+      }}
+    >
+      <h2
+        style={{
+          fontSize: "1.5rem", // text-2xl
+          fontWeight: "700", // font-bold
+          marginBottom: "0.5rem", // mb-2
+        }}
+      >
+        {title}
+      </h2>
+
+      <p
+        style={{
+          marginBottom: "1rem", // mb-4
+        }}
+      >
+        {summary}
+      </p>
+
       {trends && (
-        <ul style={{
-          marginBottom: '1rem', // mb-4
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '0.5rem',
-          paddingLeft: '3rem'
-        }}>
+        <ul
+          style={{
+            marginBottom: "1rem", // mb-4
+            display: "flex",
+            flexDirection: "column",
+            gap: "0.5rem",
+            paddingLeft: "3rem",
+          }}
+        >
           {trends.map((trend, index) => (
-            <li key={index} style={{
-              display: 'flex',
-              alignItems: 'flex-start' // items-start
-            }}>
-              <span style={{
-                marginRight: '0.5rem' // mr-2
-              }}>✓</span>
-              <span style={{
-              }}>{trend}</span>
+            <li
+              key={index}
+              style={{
+                display: "flex",
+                alignItems: "flex-start", // items-start
+              }}
+            >
+              <span
+                style={{
+                  marginRight: "0.5rem", // mr-2
+                }}
+              >
+                ✓
+              </span>
+              <span style={{}}>{trend}</span>
             </li>
           ))}
         </ul>
       )}
 
       {cta && (
-        <ul style={{
-          marginBottom: '1rem', // mb-4
-          display: 'flex',
-          flexDirection: 'column',
-        }}>
+        <ul
+          style={{
+            marginBottom: "1rem", // mb-4
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
           {cta.map((que, index) => (
-            <li key={index} style={{
-              display: 'flex',
-              alignItems: 'flex-start' // items-start
-            }}>
-              <span style={{
-                fontStyle: "italic"
-              }}>{que}</span>
+            <li
+              key={index}
+              style={{
+                display: "flex",
+                alignItems: "flex-start", // items-start
+              }}
+            >
+              <span
+                style={{
+                  fontStyle: "italic",
+                }}
+              >
+                {que}
+              </span>
             </li>
           ))}
         </ul>
